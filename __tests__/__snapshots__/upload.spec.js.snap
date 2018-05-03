@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`S3 Success mock response Replies back with a JSON object for a signed upload on succcess 1`] = `
+Object {
+  "body": "{\\"message\\":\\"Missing x-amz-meta-filekey in the header of the request.\\"}",
+  "statusCode": 400,
+}
+`;
+
+exports[`S3 Success mock response Require a header "x-amz-meta-key" 1`] = `
+Object {
+  "body": "{\\"message\\":\\"Missing x-amz-meta-filekey in the header of the request.\\"}",
+  "statusCode": 400,
+}
+`;
+
+exports[`Service aws-node-singned-uploads: S3 mock for failed operations Correctly handles error messages from S3 1`] = `
+Object {
+  "body": "{\\"message\\":\\"Missing x-amz-meta-filekey in the header of the request.\\"}",
+  "statusCode": 400,
+}
+`;

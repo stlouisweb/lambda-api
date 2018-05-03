@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1525366469227" clover="3.2.0">
+  <project timestamp="1525366469227" name="All files">
+    <metrics statements="25" coveredstatements="23" conditionals="10" coveredconditionals="8" methods="3" coveredmethods="3" elements="38" coveredelements="34" complexity="0" loc="25" ncloc="25" packages="2" files="2" classes="2">
+      <package name="src">
+        <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <file name="upload.js" path="/Users/jeremyplack/projects/OCI/rio/lambda-api/src/upload.js">
+          <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="8" count="4" type="stmt"/>
+          <line num="10" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="18" count="4" type="cond" truecount="3" falsecount="1"/>
+          <line num="22" count="4" type="cond" truecount="1" falsecount="1"/>
+          <line num="23" count="4" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
+          <line num="33" count="4" type="stmt"/>
+          <line num="39" count="4" type="stmt"/>
+          <line num="40" count="4" type="stmt"/>
+          <line num="42" count="4" type="stmt"/>
+          <line num="51" count="4" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.lib">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="envVarsChecker.js" path="/Users/jeremyplack/projects/OCI/rio/lambda-api/src/lib/envVarsChecker.js">
+          <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="2" count="7" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="6" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="11" count="7" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

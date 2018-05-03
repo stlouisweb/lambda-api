@@ -6,11 +6,30 @@ plugins:
 
 custom:
   webpack:
-    webpackConfig: 'webpack.cconfig.js'
+    webpackConfig: 'webpack.config.js'
     includeModules: true
     packager: 'yarn'
   serverless-offline:
     port: 4000
+
+resources:
+  Resources:
+    UploadBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: uploadstest-${self:provider.stage}
+        AccessControl: Private
+        CorsConfiguration:
+          CorsRules:
+          - AllowedMethods:
+            - GET
+            - PUT
+            - POST
+            - HEAD
+            AllowedOrigins:
+            - "*"
+            AllowedHeaders:
+            - "*"
 
 provider:
   name: aws
@@ -29,11 +48,11 @@ provider:
 
 functions:
   upsert-objects:
-    handler: src/upload.handler
+    handler: ./src/upload.handler
     name: ${self:provider.stage}-${self:service}-upload
     memorySize: 1024
     events:
       - http:
-        path: upload
-        method: put
-        cors: true
+          path: upload
+          method: put
+          cors: true
