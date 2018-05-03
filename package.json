@@ -1,0 +1,10 @@
+{
+  "name": "lambda-api",
+  "version": "0.1.0",
+  "description": "an example project creating rest apis with serverless framework and lambda.",
+  "main": "index.js",
+  "repository": "https://github.com/stlouisweb/lambda-api",
+  "author": "jeremyplack <stlouisweb@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
