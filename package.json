@@ -7,6 +7,14 @@
   "author": "jeremyplack <stlouisweb@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "codecov": "codecov",
+    "coverage": "npm run test && npm run codecov",
+    "deploy": "serverless deploy -v",
+    "lint": "eslint .",
+    "start": "serverless offline start",
+    "test": "jest"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
