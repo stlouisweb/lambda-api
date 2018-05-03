@@ -47,12 +47,10 @@ provider:
     Resource: "*"
 
 functions:
-  upsert-objects:
-    handler: ./src/upload.handler
-    name: ${self:provider.stage}-${self:service}-upload
-    memorySize: 1024
+  api:
+    handler: src/lambda.handler
+    name: ${self:provider.stage}-${self:service}-api
+    memorySize: 128
     events:
-      - http:
-          path: upload
-          method: put
-          cors: true
+      - http: ANY /
+      - http: 'ANY {proxy+}'
