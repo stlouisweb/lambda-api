@@ -1,4 +1,4 @@
-service: aws-nodejs # NOTE: update this with your service name
+service: simple-lambda
 
 plugins:
   - serverless-webpack
@@ -12,25 +12,6 @@ custom:
   serverless-offline:
     port: 4000
 
-resources:
-  Resources:
-    UploadBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: uploadstest-${self:provider.stage}
-        AccessControl: Private
-        CorsConfiguration:
-          CorsRules:
-          - AllowedMethods:
-            - GET
-            - PUT
-            - POST
-            - HEAD
-            AllowedOrigins:
-            - "*"
-            AllowedHeaders:
-            - "*"
-
 provider:
   name: aws
   runtime: nodejs8.10
@@ -38,19 +19,14 @@ provider:
   region: ${opt:region, file(config.json):region, 'us-east-1'}
   environment:
     REGION: ${self:provider.region}
-    BUCKET: uploadstest-${self:provider.stage}
-  versionFunctions: false
-  iamRoleStatements:
-  - Effect: "Allow"
-    Action:
-      - "s3:*"
-    Resource: "*"
+  versionFunctions: true
 
 functions:
   api:
-    handler: src/lambda.handler
+    handler: src/handler
     name: ${self:provider.stage}-${self:service}-api
     memorySize: 128
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http:
+          path: api/greeting
+          method: GET
